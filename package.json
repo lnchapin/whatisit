@@ -46,7 +46,12 @@
     },
     "rules": {
       "semi": "off",
-      "comma-dangle": ["error", "never"]
+      "comma-dangle": ["error", "never"],
+      "arrow-parens": ["error", "as-needed"],
+      "space-before-function-paren": ["error", "always"],
+      "arrow-body-style": "off",
+      "no-unused-expressions": "off",
+      "no-unused-vars": "warn"
     }
   },
   "browserslist": [
