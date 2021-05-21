@@ -3,6 +3,8 @@ exports.up = function(knex, Promise) {
         table.increments()
         table.text("info", 25000)
         table.text("url")
+        table.text("fName")
+        table.text("lName")
         table.text("email")
         table.text("password")
     })

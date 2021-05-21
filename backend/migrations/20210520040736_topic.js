@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
         table.text("topic")
         table.text("header")
         table.boolean("active")
+        table.integer("tsearched")
     })
 };
 
