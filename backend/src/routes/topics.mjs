@@ -1,5 +1,6 @@
-import { pool } from '../db/index.mjs';
 import Router from 'koa-router';
+import myknex from '../db/index.mjs';
+
 
 export const router = new Router({
   prefix: '/topics',
@@ -7,10 +8,20 @@ export const router = new Router({
 
 
 router.get('/', async ctx => {
-    const { rows } = await pool.query(`
-        SELECT t.topic, t.header, t.active, t.tsearched
-        FROM topics t
-      `
-    );
-    ctx.body = rows;
+  await myknex('topic')
+    .select().then((topics) => {
+      console.log(topics);
+      ctx.body = topics
+    });
+  return ctx.body
+});
+
+router.get('/:id', async ctx => {
+  const { id } = ctx.params;
+  await myknex('topic')
+  .where("id", id).then((topic) => {
+      console.log(topic);
+      ctx.body = topic
+    });
+  return ctx.body
 });

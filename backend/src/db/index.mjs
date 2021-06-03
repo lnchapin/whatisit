@@ -1,3 +1,10 @@
-import pg from 'pg';
+import knex from 'knex'
+import configuration from '../../knexfile'
 
-export const pool = new pg.Pool();
+// const connection = knex(configuration.development)
+
+// export default connection
+const myknex = knex(configuration.development)
+//const myknex = knex(knexfile.production)
+
+export default myknex

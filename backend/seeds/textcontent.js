@@ -10,7 +10,7 @@ exports.seed = function(knex, Promise) {
           date: new Date(),
           text: "Dog whistles are coded language that to someone who isn't in the in group sounds doesn't raise alarm but to other members sends a clear message",
           active: true,
-          authorid: ''
+          authorid: 1
         },
         {
           id: 2,
@@ -18,7 +18,7 @@ exports.seed = function(knex, Promise) {
           date: new Date(),
           text: 'research.com',
           active: true,
-          authorid: ''
+          authorid: 1
         },
         {
           id: 3,
@@ -26,7 +26,7 @@ exports.seed = function(knex, Promise) {
           date: new Date(),
           text: 'research.com',
           active: true,
-          authorid: ''
+          authorid: 1
         },
         {
           id: 4,
@@ -34,7 +34,7 @@ exports.seed = function(knex, Promise) {
           date: new Date(),
           text: 'research.com',
           active: true,
-          authorid: ''
+          authorid: 1
         }
       ]);
     })

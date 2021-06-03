@@ -4,5 +4,5 @@ import { router as topicsRouter } from './topics.mjs';
 
 export const router = new Router();
 
-router.use('/api/authors', authorRouter.routes(), authorRouter.allowedMethods());
-router.use('/api/topics', topicsRouter.routes(), topicsRouter.allowedMethods());
+router.use('/api', authorRouter.routes(), authorRouter.allowedMethods());
+router.use('/api', topicsRouter.routes(), topicsRouter.allowedMethods());
